@@ -1,25 +1,18 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-
-bool check(int n){
-    int tong = 0;
-    for(int i=1; i<=n/2; i++){
-        if(n%i == 0) 
-            tong +=i;
+int main()
+{
+    int i = 1, n, dem=0;  
+    cout <<"Nhap n = ";	cin >> n;  
+    do
+    {
+        if(n%i == 0)  
+		dem++; 
+		i++;
     }
-    	if(tong == n)
-			 return true; 
-	return false;
-}
-int main(){
-    int n;
-    cout <<"Nhap gia tri cho n =  ";
-    cin >> n;
-    if(check(n) )
-        cout <<n<<" la so hoan hao";
-    else
-        cout <<n<<" khong la so hoan hao";
-        cout <<endl ;
-    return 0;
+    while (i <= n);     
+    if (dem==2) 
+		cout << n <<" la so nguyen to" << endl;  
+    else 
+		cout << n <<"khong la so nguyen to" << endl;
 }
